@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <div class="app">
+        <h1>Expense Tracker</h1>
+
+        <div class="balance-container">
+            <h2>Your current balance</h2>
+            <div id="balance">$5000</div>
+        </div>
+
+        <div class="cashflow">
+            <div class="income-container">
+                <h2>Income </h2>
+                <div id="income">$3000</div>
+            </div>
+            <div class="expense-container">
+                <h2>Expense</h2>
+                <div id="expense">$500</div>
+            </div>    
+        </div>
+        
+        <div class="transaction-container">
+            <h2>Transaction History</h2>
+            <ul id="history">
+                <!-- <li> using this structure in js. for reference
+                    Salary
+                    <div>
+                        <span class="inc-amt">$5000</span>
+                        <button>X</button>
+                    </div>
+                </li>
+                <li>
+                    Bills
+                    <div>
+                        <span class="exp-amt">$400</span>
+                        <button>X</button>
+                    </div>
+                </li>
+                <li>
+                    Insurance
+                    <div>
+                        <span class="exp-amt">$400</span>
+                        <button>X</button>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+
+        <div class="form-container">
+            <h2>Add new transaction</h2>
+            <form onsubmit="return false;">
+                <label for="name">Name</label>
+                <input id="name" type="text">
+                <label for="amount">Amount</label>
+                <input id="amount" type="number"> <!-- only numbers can be keyed in -->
+                <button id="addInc">Add Income</button>
+                <button id="addExp">Add Expense</button>
+            </form>
+        </div>         
+    </div>
+    <script src="src/index.js"></script>
+</body>
+
+</html>

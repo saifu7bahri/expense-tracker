@@ -1,0 +1,126 @@
+body {
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.app h1 {
+    text-align: center;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+.balance-container #balance {
+    font-size: 2em;
+}
+
+.cashflow {
+    display: flex;
+    box-shadow: 0px 1px 3px 1px darkgray;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+    margin: 20px 0px;
+}
+
+.income-container {
+    padding-right: 20px;
+    border-right: 1px solid darkgray;
+
+}
+
+.expense-container {
+    padding-left: 20px;
+    border-left: 1px solid gray;
+}
+
+#income, #expense {
+    font-size: 1.5em;
+}
+
+#income {
+    color: green;  
+}
+
+#expense {
+    color: darkred;
+}
+
+#history {
+    list-style: none;
+    /* margin: 0; */
+    padding: 0;
+}
+
+#history li {
+    display:flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    box-shadow: 0px 1px 3px 1px darkgray;
+    margin: 0px 0px 10px 0px;
+    padding: 10px;
+}
+
+#history li span {
+    display:inline-block;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 5px;
+
+}
+
+#history li .inc-amt {
+    background-color: green;
+    color:whitesmoke;
+}
+
+#history li .exp-amt {
+    background-color: darkred;
+    color: whitesmoke;
+}
+
+#history li button {
+    padding: 5px 10px;
+}
+
+.form-container form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container form label{
+    padding-bottom: 10px;
+}
+
+.form-container form input {
+    height: 25px;
+    margin-bottom:15px;
+    border: none;
+    box-shadow: 0px 1px 3px 1px darkgray;
+}
+
+.form-container form button {
+    border: none;
+    padding: 10px;
+    font-size: 1.2em;
+    margin-bottom:15px;
+    text-transform: uppercase;
+}
+
+#addInc {
+    background-color: green;
+    color: aliceblue;
+    box-shadow: 0px 1px 5px 1px darkgray;
+}
+
+#addExp {
+    background-color: darkred;
+    color:aliceblue;
+    box-shadow: 0px 1px 5px 1px darkgray;
+}
