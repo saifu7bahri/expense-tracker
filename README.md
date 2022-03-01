@@ -16,4 +16,5 @@ This is my individual project for the SkillsUnion/NTU Software Developer Immersi
 
 ## Getting started
 ### Usage
+Key in your income and expenses to monitor your monthly spending.
 ## Authors and acknowledgement
