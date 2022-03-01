@@ -3,9 +3,9 @@ let state = {
     income: 2000,
     expense: 1000,
     transactions: [
-        // { name: 'Salary', amount: 5000, type: "income" },
-        // { name: 'Bills', amount: 200, type: "expense" },
-        // { name: 'Insurance', amount: 400, type: "expense" }
+        // { id: unique(), name: 'Salary', amount: 5000, type: "income" },
+        // { id: unique(), name: 'Bills', amount: 200, type: "expense" },
+        // { id: unique(), name: 'Insurance', amount: 400, type: "expense" }
     ]
 }
 
@@ -32,10 +32,11 @@ function initializeListeners() {
     addIncomeElement.addEventListener('click', onAddIncomeClick);
     addExpenseElement.addEventListener('click', onAddExpenseClick);
 }
-
+// for convenience
 function addTransaction(name, amount, type) {
     if (name !== '' && amount !== '') {
         let transaction = {
+            id: uniqueId(),
             name: name, 
             amount: parseInt(amount),
             type: type
@@ -49,7 +50,7 @@ function addTransaction(name, amount, type) {
     }   else {
         alert('Data is invalid.')
     }
-    nameInputElement.value = "";
+    nameInputElement.value = ""; //empty the box once clicked
     amountInputElement.value = "";
  
 }
@@ -63,7 +64,7 @@ function onAddExpenseClick() {
 }
 
 function removalClick(event) {
-    var id = event.target.getAttribute('data-id');
+    var id = parseInt(event.target.getAttribute('data-id'));
     var deleteIndex;
 
     for (var i = 0; i < state.transactions.length; i++) {
